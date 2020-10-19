@@ -20,14 +20,20 @@ def send_message(driver, target, message_txt):
         print(group_title)
         print("Wait for few seconds")
         group_title.click()
-        message = driver.find_elements_by_xpath(
+        xpath_message_box = driver.find_elements_by_xpath(
             '//*[@id="main"]/footer/div[1]/div[2]/div/div[2]'
-        )[0]
+        )
+        if xpath_message_box and type(xpath_message_box) is list:
+            message = driver.find_elements_by_xpath(
+                '//*[@id="main"]/footer/div[1]/div[2]/div/div[2]'
+            )[0]
+        else:
+            raise Exception
         message.send_keys(message_txt)
         sendbutton = driver.find_elements_by_xpath(
             '//*[@id="main"]/footer/div[1]/div[3]/button'
         )[0]
         sendbutton.click()
-        print("Sent")
+        print("Message Sent")
     except Exception as e:
         print(f"Unable to Send Message to {target} Error:{e}")
