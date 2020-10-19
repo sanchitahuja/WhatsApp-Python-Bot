@@ -3,10 +3,10 @@ import time
 
 driver = get_driver()
 while True:
-    target = ['Sanchit']
+    target = ["Sanchit"]
     for name in target:
         time.sleep(10)
-        print('Sending message to ', name)
-        send_message(driver, target=name, message_txt='Trying Something! Ignore!')
+        print("Sending message to ", name)
+        send_message(driver, target=name, message_txt="Trying Something! Ignore!")
 
 driver.close()
