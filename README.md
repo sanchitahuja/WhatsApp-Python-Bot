@@ -1,2 +1,2 @@
 # WhatsApp-Python-Bot
-Simple Python3 Script to automate sending Messages to Contact using WhatsApp Web and Selenium
+Simple Python3 Script to automate sending Messages to Contact that uses WhatsApp Web and Selenium
