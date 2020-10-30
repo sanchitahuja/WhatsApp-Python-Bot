@@ -1,7 +1,9 @@
-from utils.whatsapp_message import get_driver, send_message
 import time
 
+from utils.whatsapp_message import get_driver, send_message
+
 driver = get_driver()
+
 while True:
     input_names = input("Input names of users you want to text(Space separated)").split(" ")
     message_text = input("Enter the text of the message")
